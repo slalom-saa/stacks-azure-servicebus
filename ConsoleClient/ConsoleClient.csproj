@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputType>exe</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <ApplicationIcon />
+    <OutputTypeEx>exe</OutputTypeEx>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Slalom.Stacks.AzureServiceBus\Slalom.Stacks.AzureServiceBus.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties stacks_1json__JSONSchema="..\Slalom.Stacks.AzureServiceBus\schema.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5C811C47-156F-4083-99BE-45CECD191EDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1CFF4FAB-EE5B-4732-B059-512623F94C23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slalom.Stacks.AzureServiceBus", "Slalom.Stacks.AzureServiceBus\Slalom.Stacks.AzureServiceBus.csproj", "{E89759FD-A17E-4B1D-8D45-748CFB256C9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{842C5F6E-9E61-4050-BD2F-386FCD814781}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E89759FD-A17E-4B1D-8D45-748CFB256C9C} = {5C811C47-156F-4083-99BE-45CECD191EDC}
+		{842C5F6E-9E61-4050-BD2F-386FCD814781} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
+	EndGlobalSection
+EndGlobal
