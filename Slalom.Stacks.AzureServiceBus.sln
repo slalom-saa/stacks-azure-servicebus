@@ -6,8 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5C811C47-156F-4083-99BE-45CECD191EDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1CFF4FAB-EE5B-4732-B059-512623F94C23}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slalom.Stacks.AzureServiceBus", "Slalom.Stacks.AzureServiceBus\Slalom.Stacks.AzureServiceBus.csproj", "{E89759FD-A17E-4B1D-8D45-748CFB256C9C}"
+	ProjectSection(SolutionItems) = preProject
+		test\EventConsumer\EventConsumer.csproj = test\EventConsumer\EventConsumer.csproj
+		test\EventProducer\EventProducer.csproj = test\EventProducer\EventProducer.csproj
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{13E6BE02-5F08-452B-B39E-A5A4D5A8B038}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,9 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{13E6BE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventProducer", "EventProducer\EventProducer.csproj", "{F142CE44-FA4F-4629-8BCE-B6A29AD17253}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventConsumer", "EventConsumer\EventConsumer.csproj", "{DB25C2D3-412F-448B-9709-34587E4CC43B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slalom.Stacks.AzureServiceBus", "src\Slalom.Stacks.AzureServiceBus\Slalom.Stacks.AzureServiceBus.csproj", "{F31A8728-DD05-4DA7-81A4-910F9438A2BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,25 +25,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31A8728-DD05-4DA7-81A4-910F9438A2BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31A8728-DD05-4DA7-81A4-910F9438A2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31A8728-DD05-4DA7-81A4-910F9438A2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31A8728-DD05-4DA7-81A4-910F9438A2BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E89759FD-A17E-4B1D-8D45-748CFB256C9C} = {5C811C47-156F-4083-99BE-45CECD191EDC}
-		{F142CE44-FA4F-4629-8BCE-B6A29AD17253} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
-		{DB25C2D3-412F-448B-9709-34587E4CC43B} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
+		{F31A8728-DD05-4DA7-81A4-910F9438A2BB} = {5C811C47-156F-4083-99BE-45CECD191EDC}
 	EndGlobalSection
 EndGlobal
