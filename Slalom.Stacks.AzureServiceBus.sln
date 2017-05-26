@@ -9,9 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1CFF4FAB-E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slalom.Stacks.AzureServiceBus", "Slalom.Stacks.AzureServiceBus\Slalom.Stacks.AzureServiceBus.csproj", "{E89759FD-A17E-4B1D-8D45-748CFB256C9C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{842C5F6E-9E61-4050-BD2F-386FCD814781}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{13E6BE02-5F08-452B-B39E-A5A4D5A8B038}"
+	ProjectSection(SolutionItems) = preProject
+		assets\build.ps1 = assets\build.ps1
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventProducer", "EventProducer\EventProducer.csproj", "{F142CE44-FA4F-4629-8BCE-B6A29AD17253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventConsumer", "EventConsumer\EventConsumer.csproj", "{DB25C2D3-412F-448B-9709-34587E4CC43B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,16 +29,21 @@ Global
 		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E89759FD-A17E-4B1D-8D45-748CFB256C9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{842C5F6E-9E61-4050-BD2F-386FCD814781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F142CE44-FA4F-4629-8BCE-B6A29AD17253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB25C2D3-412F-448B-9709-34587E4CC43B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E89759FD-A17E-4B1D-8D45-748CFB256C9C} = {5C811C47-156F-4083-99BE-45CECD191EDC}
-		{842C5F6E-9E61-4050-BD2F-386FCD814781} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
+		{F142CE44-FA4F-4629-8BCE-B6A29AD17253} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
+		{DB25C2D3-412F-448B-9709-34587E4CC43B} = {1CFF4FAB-EE5B-4732-B059-512623F94C23}
 	EndGlobalSection
 EndGlobal

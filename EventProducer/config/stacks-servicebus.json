@@ -2,12 +2,9 @@
   "stacks": {
     "azureServiceBus": {
       "connectionString": "Endpoint=sb://arch-patolus-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=nf+u1qDOvVISKRvHp+LrB6srLgEe7FfLClaWsuMz4aQ=",
-      "subscriptions": [
-        {
-          "topicName": "Events",
-          "subscriptionName": "TestSubscription"
-        }
-      ]
+      "eventPublisher": {
+        "topicName": "SampleEvents"
+      }
     }
   }
 }

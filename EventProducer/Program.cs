@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Autofac;
 using Slalom.Stacks;
 using Slalom.Stacks.AzureServiceBus;
-using Slalom.Stacks.AzureServiceBus.Components;
 using Slalom.Stacks.Services;
 using Slalom.Stacks.Services.Logging;
 using Slalom.Stacks.Text;
 
-namespace ConsoleClient
+namespace EventProducer
 {
     public class SomeEvent : Event
     {
@@ -25,27 +18,25 @@ namespace ConsoleClient
         }
     }
 
-    [Subscribe("SomeEvent")]
-    public class Handler : EndPoint<SomeEvent>
-    {
-        public override void Receive(SomeEvent instance)
-        {
-            instance.OutputToJson();
-        }
-    }
-
     static class Program
     {
         public static void Main()
         {
+            Console.Title = "Event Producer";
+
             using (var stack = new Stack())
             {
                 stack.UseAzureServiceBus();
 
-                stack.Publish(new SomeEvent("one"));
+                Console.WriteLine("Press Ctrl + C to exit or Enter to continue...");
 
-                Console.WriteLine("...");
-                Console.ReadKey();
+                for (int i = 0; ; i++)
+                {
+                    Console.ReadKey();
+
+                    stack.Publish(new SomeEvent("Event " + i));
+                    Console.WriteLine("Event {0} published.", i);
+                }
             }
         }
     }

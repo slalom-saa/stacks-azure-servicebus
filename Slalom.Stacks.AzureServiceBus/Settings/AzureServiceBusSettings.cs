@@ -6,6 +6,7 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace Slalom.Stacks.AzureServiceBus.Settings
 {
@@ -30,5 +31,13 @@ namespace Slalom.Stacks.AzureServiceBus.Settings
         /// The topic event publisher settings.
         /// </value>
         public TopicEventPublisherSettings EventPublisher { get; set; } = new TopicEventPublisherSettings();
+
+        /// <summary>
+        /// Gets or sets the topic subscriptions.
+        /// </summary>
+        /// <value>
+        /// The topic subscriptions.
+        /// </value>
+        public List<TopicSubscriptionSettings> Subscriptions { get; set; } = new List<TopicSubscriptionSettings>();
     }
 }

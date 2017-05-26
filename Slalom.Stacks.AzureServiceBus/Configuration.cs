@@ -6,12 +6,14 @@
  */
 
 using System;
+using System.Linq;
 using Autofac;
 using Microsoft.Extensions.Configuration;
+using Slalom.Stacks.AzureServiceBus.Components;
 using Slalom.Stacks.AzureServiceBus.Modules;
 using Slalom.Stacks.AzureServiceBus.Settings;
 
-namespace Slalom.Stacks
+namespace Slalom.Stacks.AzureServiceBus
 {
     /// <summary>
     /// Configures Azure Service Bus components.
@@ -28,23 +30,22 @@ namespace Slalom.Stacks
             var settings = new AzureServiceBusSettings();
             instance.Configuration.GetSection("stacks:azureServiceBus")?.Bind(settings);
 
-            instance.UseTopicEventPublishing();
+            instance.Use(builder =>
+            {
+                if (settings.EventPublisher?.TopicName != null)
+                {
+                    builder.RegisterModule(new TopicEventPublishingModule(settings));
+                }
+                if (settings.Subscriptions.Any())
+                {
+                    builder.RegisterModule(new TopicSubscriptionModule(settings));
+                }
+            });
 
-            return instance;
-        }
-
-        /// <summary>
-        /// Configures Azure Topic event publishing.
-        /// </summary>
-        /// <param name="instance">The this instance.</param>
-        /// <param name="settings">The settings to use.</param>
-        /// <returns>A task for asynchronous programming.</returns>
-        public static Stack UseTopicEventPublishing(this Stack instance, AzureServiceBusSettings settings = null)
-        {
-            settings = settings ?? new AzureServiceBusSettings();
-            instance.Configuration.GetSection("stacks:azureServiceBus")?.Bind(settings);
-
-            instance.Use(e => e.RegisterModule(new TopicEventPublishingModule(settings)));
+            if (settings.Subscriptions.Any())
+            {
+                instance.Container.Resolve<TopicSubscription>();
+            }
 
             return instance;
         }

@@ -18,17 +18,24 @@
               "type": "string",
               "description": "The name of the topic.",
               "default": "Events"
-            },
-            "batchSize": {
-              "type": "integer",
-              "default": 10,
-              "description": "The size of the batch to send."
-            },
-            "interval": {
-              "type": "string",
-              "default": "00:00:05",
-              "description": "The interval duration."
             }
+          }
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topicName": {
+                "type": "string",
+                "description": "The name of the topic.",
+              },
+              "subscriptionName": {
+                "type": "string",
+                "description": "The name of the subscription."
+              }
+            },
+            "required": ["topicName", "subscriptionName"]
           }
         }
       }
@@ -44,6 +51,6 @@
           "$ref": "#/definitions/azureServiceBus"
         }
       }
-    }  
+    }
   }
 }

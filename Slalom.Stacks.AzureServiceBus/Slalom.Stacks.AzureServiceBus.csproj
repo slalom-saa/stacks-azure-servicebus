@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageId>Slalom.Stacks.EventHub</PackageId>
+    <Version>1.9.4</Version>
+    <Authors>Stacks Contributors</Authors>
+    <Company />
+    <Product>Slalom.Stacks.EventHub</Product>
+    <Description>Contains components to publish and subscribe to events in Azure Service Bus.</Description>
+    <PackageLicenseUrl>https://github.com/slalom-saa/stacks/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/slalom-saa/stacks</PackageProjectUrl>
+    <PackageTags>slalom;stacks;azure;servicebus</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
