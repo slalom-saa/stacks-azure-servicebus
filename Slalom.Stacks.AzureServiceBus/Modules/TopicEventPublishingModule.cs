@@ -1,28 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* 
+ * Copyright (c) Stacks Contributors
+ * 
+ * This file is subject to the terms and conditions defined in
+ * the LICENSE file, which is part of this source code package.
+ */
+
+using System;
 using Autofac;
 using Slalom.Stacks.AzureServiceBus.Components;
 using Slalom.Stacks.AzureServiceBus.Settings;
+using Slalom.Stacks.Validation;
 
 namespace Slalom.Stacks.AzureServiceBus.Modules
 {
+    /// <summary>
+    /// Module to configure Azure Topic event publishing.
+    /// </summary>
+    /// <seealso cref="Autofac.Module" />
     public class TopicEventPublishingModule : Module
     {
         private readonly AzureServiceBusSettings _settings;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TopicEventPublishingModule" /> class.
+        /// </summary>
+        /// <param name="settings">The current settings.</param>
+        /// <exception cref="System.ArgumentNullException">The <paramref name="settings"/> argument is null.</exception>
         public TopicEventPublishingModule(AzureServiceBusSettings settings)
         {
+            Argument.NotNull(settings, nameof(settings));
+
             _settings = settings;
         }
 
+        /// <inheritdoc />
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<TopicEventPublisher>()
-                .WithParameter(new TypedParameter(typeof(AzureServiceBusSettings), _settings))
-                .AsSelf().AsImplementedInterfaces().SingleInstance();
+                   .WithParameter(new TypedParameter(typeof(AzureServiceBusSettings), _settings))
+                   .AsSelf().AsImplementedInterfaces().SingleInstance();
         }
     }
 }

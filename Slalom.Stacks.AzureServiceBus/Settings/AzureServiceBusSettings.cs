@@ -10,20 +10,6 @@ using System;
 namespace Slalom.Stacks.AzureServiceBus.Settings
 {
     /// <summary>
-    /// Settings for the topic event publisher.
-    /// </summary>
-    public class TopicEventPublisherSettings
-    {
-        /// <summary>
-        /// Gets or sets the name of the topic.
-        /// </summary>
-        /// <value>
-        /// The name of the topic.
-        /// </value>
-        public string TopicName { get; set; } = "Events";
-    }
-
-    /// <summary>
     /// Settings for Stacks Azure Service Bus.
     /// </summary>
     /// <seealso href="https://azure.microsoft.com/en-us/services/service-bus/"/>

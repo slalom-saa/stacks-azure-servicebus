@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Slalom.Stacks;
+using Slalom.Stacks.Services;
 using Slalom.Stacks.Services.Logging;
 
 namespace ConsoleClient
@@ -18,6 +20,15 @@ namespace ConsoleClient
         }
     }
 
+    [Subscribe("SomeEvent")]
+    public class Handler : EndPoint
+    {
+        public override void Receive()
+        {
+            Console.WriteLine("SSS");
+        }
+    }
+
     static class Program
     {
         public static void Main()
@@ -26,9 +37,7 @@ namespace ConsoleClient
             {
                 stack.UseAzureServiceBus();
 
-                stack.Publish(new SomeEvent("name"));
-
-                Console.ReadKey();
+                stack.Publish(new SomeEvent("one"));
             }
         }
     }

@@ -1,10 +1,6 @@
-cd "C:\Source\Stacks\Azure Service Bus"
+cd "C:\Source\Patolus - Treatment API"
 
-if (Test-Path ".sonarqube") {
-    Remove-Item ".sonarqube" -Recurse -Force
-}
-
-SonarQube.Scanner.MSBuild.exe begin /d:sonar.host.url=https://sonarqube.patolus.io /k:"stacks-azure-servicebus" /n:"Stacks - Azure Service Bus" /v:"1.0" /d:sonar.login=6e34d81ee907b527d4f87598e3673bc54571efa1
+SonarQube.Scanner.MSBuild.exe begin /d:sonar.host.url=https://sonarqube.patolus.io /k:"patolus-treatment" /n:"Patolus Treatment" /v:"1.0" /d:sonar.login=451d0eae1a13c9e2a8c92b547942435c23933393
 
 & "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe" /t:Rebuild
 
