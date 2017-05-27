@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageId>Slalom.Stacks.AzureServiceBus</PackageId>
-    <Version>1.9.4</Version>
+    <Version>1.9.5</Version>
     <Authors>Stacks Contributors</Authors>
     <Company />
     <Product>Slalom.Stacks.AzureServiceBus</Product>
@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Slalom.Stacks" Version="1.9.3" />
+    <PackageReference Include="Slalom.Stacks" Version="1.9.5" />
     <PackageReference Include="WindowsAzure.ServiceBus" Version="4.1.1" />
   </ItemGroup>
   
